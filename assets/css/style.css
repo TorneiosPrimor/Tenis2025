@@ -1,0 +1,189 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header img {
+  max-width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto 10px auto;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+}
+
+h3 {
+  text-align: center;
+  margin: 20px 0 10px 0;
+  color: #64b5f6;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-bottom: 2px solid #64b5f6;
+  padding-bottom: 5px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tabs, .sub-tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.tab-button, .sub-tab-button {
+  background-color: #333;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  color: #e0e0e0;
+}
+
+.tab-button:hover, .sub-tab-button:hover {
+  background-color: #555;
+}
+
+.tab-button.active, .sub-tab-button.active {
+  background-color: #1976d2;
+  color: white;
+}
+
+.tab-content, .group-content {
+  display: none;
+}
+
+.tab-content.active, .group-content.active {
+  display: block;
+}
+
+#jogos, #classificacao,
+[id^="jogos-"], [id^="classificacao-"] {
+  margin: 20px auto;
+  max-width: 900px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+table {
+  margin: 0 auto;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #555;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #1976d2;
+  color: white;
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 768px) {
+  .tabs, .sub-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tab-button, .sub-tab-button {
+    width: 90%;
+    max-width: 300px;
+    margin: 8px 0;
+    font-size: 1rem;
+  }
+
+  #jogos, #classificacao,
+  [id^="jogos-"], [id^="classificacao-"] {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+    text-align: center;
+  }
+
+  th, td {
+    font-size: 0.85rem;
+    padding: 6px 4px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1rem;
+  }
+}
+
+/* Responsividade para telas muito pequenas (celulares menores) */
+@media (max-width: 400px) {
+  .tab-button, .sub-tab-button {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    font-size: 0.75rem;
+    padding: 5px 3px;
+  }
+}
+
+/* Impressão otimizada */
+@media print {
+  body {
+    background: none !important;
+    color: black !important;
+    margin: 0;
+    font-size: 12pt;
+  }
+
+  header, .tabs, .sub-tabs, .tab-button, .sub-tab-button {
+    display: none !important;
+  }
+
+  h1, h3 {
+    color: black !important;
+    border: none !important;
+  }
+
+  #jogos, #classificacao,
+  [id^="jogos-"], [id^="classificacao-"] {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 0 20px 0 !important;
+  }
+
+  table {
+    border: 1px solid black !important;
+    margin: 0 auto 20px auto !important;
+    width: 100% !important;
+  }
+
+  th, td {
+    border: 1px solid black !important;
+    padding: 6px !important;
+    font-size: 10pt !important;
+  }
+}

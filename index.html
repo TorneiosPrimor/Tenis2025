@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="website icon" type="png" href="assets/images/Logo Primor.png">
+    
+    <title>Campeonato de Tênis</title>
+  </head>
+  <body>
+
+    <header>
+      <img src="assets/images/Logo Primor.png" alt="Logo Primor das Torres">
+      <h1>Campeonato de Tênis</h1>
+    </header>
+
+    <!-- Tabs principais -->
+    <div class="tabs">
+      <button class="tab-button active" data-tab="intermediario">Intermediário Masculino</button>
+      <button class="tab-button" data-tab="feminino-kids">Feminino / Kids</button>
+      <button class="tab-button" data-tab="avancado">Classe Avançado</button>
+    </div>
+
+    <!-- Conteúdo das tabs principais -->
+
+    <div class="tab-content active" id="intermediario">
+      <div class="sub-tabs">
+        <button class="sub-tab-button active" data-group="grupo-a-int">Grupo A</button>
+        <button class="sub-tab-button" data-group="grupo-b-int">Grupo B</button>
+      </div>
+
+      <div class="group-content active" id="grupo-a-int">
+        <h3>Tabela de Jogos</h3>
+        <div id="jogos-grupo-a-int"></div>
+
+        <h3>Tabela de Classificação</h3>
+        <div id="classificacao-grupo-a-int"></div>
+      </div>
+
+      <div class="group-content" id="grupo-b-int">
+        <h3>Tabela de Jogos</h3>
+        <div id="jogos-grupo-b-int"></div>
+
+        <h3>Tabela de Classificação</h3>
+        <div id="classificacao-grupo-b-int"></div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="feminino-kids">
+      <div class="sub-tabs">
+        <button class="sub-tab-button active" data-group="grupo-a-fk">Grupo A</button>
+        <button class="sub-tab-button" data-group="grupo-b-fk">Grupo B</button>
+      </div>
+
+      <div class="group-content active" id="grupo-a-fk">
+        <h3>Tabela de Jogos</h3>
+        <div id="jogos-grupo-a-fk"></div>
+
+        <h3>Tabela de Classificação</h3>
+        <div id="classificacao-grupo-a-fk"></div>
+      </div>
+
+      <div class="group-content" id="grupo-b-fk">
+        <h3>Tabela de Jogos</h3>
+        <div id="jogos-grupo-b-fk"></div>
+
+        <h3>Tabela de Classificação</h3>
+        <div id="classificacao-grupo-b-fk"></div>
+      </div>
+    </div>
+
+    <div class="tab-content" id="avancado">
+      <h3>Tabela de Jogos</h3>
+      <div id="jogos-avancado"></div>
+
+      <h3>Tabela de Classificação</h3>
+      <div id="classificacao-avancado"></div>
+    </div>
+
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/dados.js"></script>
+  </body>
+</html>
