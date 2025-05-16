@@ -1,13 +1,78 @@
+:root {
+  --color-1: #000;
+  --color-2: #FFF;
+  --color-3: #010a0f;
+  --color-4: #00141e;
+  --color-5: #001e28;
+  --color-6: #0f2d37;
+  --color-7: #2b7d99;
+  
+  /* .5rem = 8px | 1rem = 16px */
+  --font-0: 'EA-Sports', sans-serif;
+  --font-1: 'Poppins', sans-serif;
+  --font-2: 'Times New Roman', Times, serif;
+  --biggest-font-size: 3rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+
+  /* Font weight */
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+
+  /* Z-Index */
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-fixed2: 101;
+
+  /* Bordas */
+  --border-min: .5rem;
+  --border-max: 1rem;
+  --border-button: 4rem;
+  --padding-button: .5rem 1rem;
+
+  /* Sombras */
+  --shadow-none: 0 0 0 black;
+  --shadow-0: 0 0 10px rgb(0, 0, 0, .2);
+  --shadow-1: 0px 0px .4rem rgb(192, 147, 117, .8);
+}
+/* Responsive typography */
+@media screen and (min-width: 1199.98px){
+  :root{
+    --biggest-font-size: 4.5rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .875rem;
+  }
+}
 @font-face {
   font-family: Poppins;
   src: url(../../fonts/Poppins-Regular.woff) format('truetype');
+}
+@font-face {
+  font-family: EA-Sports;
+  src: url(../../fonts/EA-Sports.woff) format('truetype');
+}
+* {
+  /* border: 1px solid red; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: Poppins, sans-serif;
   margin: 20px;
-  background-color: #121212;
-  color: #e0e0e0;
+  background-color: var(--color-4);
+  color: var(--color-2);
 }
 
 header {
@@ -25,17 +90,17 @@ header img {
 h1 {
   text-align: center;
   margin-bottom: 30px;
-  color: #ffffff;
+  color: var(--color-2);
 }
 
 h3 {
   text-align: center;
   margin: 20px 0 10px 0;
-  color: #64b5f6;
+  color: var(--color-2);
   font-weight: bold;
   font-size: 1.2rem;
-  border-bottom: 2px solid #64b5f6;
-  padding-bottom: 5px;
+  border-bottom: 2px solid var(--color-5);
+  padding-bottom: 1rem;
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
@@ -49,7 +114,7 @@ h3 {
 }
 
 .tab-button, .sub-tab-button {
-  background-color: #333;
+  background-color: var(--color-6);
   border: none;
   padding: 10px 20px;
   margin: 5px;
@@ -65,7 +130,7 @@ h3 {
 }
 
 .tab-button.active, .sub-tab-button.active {
-  background-color: #1976d2;
+  background-color: var(--color-7);
   color: white;
 }
 
@@ -77,11 +142,20 @@ h3 {
   display: block;
 }
 
+.resultado{
+  background: var(--color-5);
+  margin: 2rem 10px;
+  padding: 2rem 1rem;
+  box-shadow: var(--shadow-0);
+}
+.ultimoJogo{
+  padding: 2rem 1rem;
+  border-bottom: none;
+}
 .resultado table{
   /* max-width: 30rem; */
   border: none;
   border-collapse: collapse;
-  margin-bottom: 20px;
 }
 .resultado tr{
   border: none;
