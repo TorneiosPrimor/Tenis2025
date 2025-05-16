@@ -1,5 +1,10 @@
+@font-face {
+  font-family: Poppins;
+  src: url(../../fonts/Poppins-Regular.woff) format('truetype');
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: Poppins, sans-serif;
   margin: 20px;
   background-color: #121212;
   color: #e0e0e0;
@@ -70,6 +75,21 @@ h3 {
 
 .tab-content.active, .group-content.active {
   display: block;
+}
+
+.resultado table{
+  /* max-width: 30rem; */
+  border: none;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+.resultado tr{
+  border: none;
+  border-collapse: collapse;
+}
+.resultado td{
+  border: none;
+  border-collapse: collapse;
 }
 
 #jogos, #classificacao,
