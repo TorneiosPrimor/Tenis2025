@@ -24,7 +24,7 @@ const dadosCampeonato = {
       jogadores: ['Mayke', 'Adriano', 'Ceará', 'Nero', 'Jefferson', 'Bittencourt'],
       jogos: [
         { jogador1: 'Mayke', jogador2: 'Adriano', sets: [] },
-        { jogador1: 'Mayke', jogador2: 'Ceará', sets: [] },
+        { jogador1: 'Mayke', jogador2: 'Ceará', sets: [[1, 6], [1, 6]] },
         { jogador1: 'Mayke', jogador2: 'Nero', sets: [] },
         { jogador1: 'Mayke', jogador2: 'Jefferson', sets: [] },
         { jogador1: 'Mayke', jogador2: 'Bittencourt', sets: [] },
@@ -36,7 +36,7 @@ const dadosCampeonato = {
         { jogador1: 'Ceará', jogador2: 'Jefferson', sets: [] },
         { jogador1: 'Ceará', jogador2: 'Bittencourt', sets: [] },
         { jogador1: 'Nero', jogador2: 'Jefferson', sets: [] },
-        { jogador1: 'Nero', jogador2: 'Bittencourt', sets: [] },
+        { jogador1: 'Nero', jogador2: 'Bittencourt', sets: [[0, 6], [2, 6]] },
         { jogador1: 'Jefferson', jogador2: 'Bittencourt', sets: [] },
       ],
     },
