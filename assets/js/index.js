@@ -2,16 +2,18 @@
 function gerarTabelaJogos(jogadores, jogos, containerId) {
   let html = '';
 
-  // Ordena os jogos: os com resultado (sets.length > 0) vão para o topo
-  const jogosOrdenados = [...jogos].sort((a, b) => {
-    return b.sets.length - a.sets.length;
-  });
+  // Ordena os jogos: os com resultado vão para o topo
+  const jogosOrdenados = [...jogos].sort((a, b) => b.sets.length - a.sets.length);
 
-  jogosOrdenados.forEach(jogo => {
+  jogosOrdenados.forEach((jogo, index) => {
     const sets = jogo.sets;
     const hasResultado = sets.length > 0;
+    const isUltimoJogo = index === jogosOrdenados.length - 1;
 
-    html += '<div class="resultado">';
+    // Classe extra se for o último jogo (permite destaque ou controle por CSS/JS)
+    const divClass = isUltimoJogo ? 'resultado ultimoJogo' : 'resultado';
+
+    html += `<div class="${divClass}">`;
     html += '<table style="border: none; border-collapse: collapse;">';
 
     html += `
@@ -63,7 +65,6 @@ function gerarTabelaJogos(jogadores, jogos, containerId) {
 
   document.getElementById(containerId).innerHTML = html;
 }
-
 
 // Função para gerar tabela de classificação com critérios
 function gerarTabelaClassificacao(jogadores, jogos, containerId) {
