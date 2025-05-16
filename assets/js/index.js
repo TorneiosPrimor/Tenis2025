@@ -1,29 +1,69 @@
 // Função para gerar tabela de jogos (um contra um)
 function gerarTabelaJogos(jogadores, jogos, containerId) {
-  let html = '<table border="1" cellspacing="0" cellpadding="5"><thead><tr><th>Jogador 1</th><th>Jogador 2</th><th>Resultado</th></tr></thead><tbody>';
+  let html = '';
 
-  jogos.forEach(jogo => {
-    if (jogo.sets.length === 0) {
-    html += `<tr>
-        <td>${jogo.jogador1}</td>
-        <td>${jogo.jogador2}</td>
-        <td></td>
-    </tr>`;
-    } else {
-    const resultadoSets = jogo.sets.map(s => `${s[0]}x${s[1]}`).join(', ');
-    const setsJ1 = jogo.sets.filter(s => s[0] > s[1]).length;
-    const setsJ2 = jogo.sets.filter(s => s[1] > s[0]).length;
-    html += `<tr>
-        <td>${jogo.jogador1}</td>
-        <td>${jogo.jogador2}</td>
-        <td>${setsJ1} x ${setsJ2} (${resultadoSets})</td>
-    </tr>`;
-    }
+  // Ordena os jogos: os com resultado (sets.length > 0) vão para o topo
+  const jogosOrdenados = [...jogos].sort((a, b) => {
+    return b.sets.length - a.sets.length;
   });
 
-  html += '</tbody></table>';
+  jogosOrdenados.forEach(jogo => {
+    const sets = jogo.sets;
+    const hasResultado = sets.length > 0;
+
+    html += '<div class="resultado">';
+    html += '<table style="border: none; border-collapse: collapse;">';
+
+    html += `
+      <tr>
+        <td></td>
+        <td>Resultado</td>
+        <td>1º Set</td>
+        <td>2º Set</td>
+        <td>Tiebreak</td>
+      </tr>
+    `;
+
+    if (hasResultado) {
+      const setsJ1 = sets.filter(s => s[0] > s[1]).length;
+      const setsJ2 = sets.filter(s => s[1] > s[0]).length;
+
+      html += `
+        <tr>
+          <td style="text-align: start; min-width: 6rem;">${jogo.jogador1}</td>
+          <td style="font-weight: bold;">${setsJ1}</td>
+          <td style="font-weight: lighter; color: gray;">${sets[0]?.[0] ?? ''}</td>
+          <td style="font-weight: lighter; color: gray;">${sets[1]?.[0] ?? ''}</td>
+          <td style="font-weight: lighter; color: gray;">${sets[2]?.[0] ?? ''}</td>
+        </tr>
+        <tr>
+          <td style="text-align: start; min-width: 6rem;">${jogo.jogador2}</td>
+          <td style="font-weight: bold;">${setsJ2}</td>
+          <td style="font-weight: lighter; color: gray;">${sets[0]?.[1] ?? ''}</td>
+          <td style="font-weight: lighter; color: gray;">${sets[1]?.[1] ?? ''}</td>
+          <td style="font-weight: lighter; color: gray;">${sets[2]?.[1] ?? ''}</td>
+        </tr>
+      `;
+    } else {
+      html += `
+        <tr>
+          <td style="text-align: start; min-width: 6rem;">${jogo.jogador1}</td>
+          <td colspan="4" style="color: gray; font-style: italic;">Aguardando resultado</td>
+        </tr>
+        <tr>
+          <td style="text-align: start; min-width: 6rem;">${jogo.jogador2}</td>
+          <td colspan="4"></td>
+        </tr>
+      `;
+    }
+
+    html += '</table>';
+    html += '</div>';
+  });
+
   document.getElementById(containerId).innerHTML = html;
 }
+
 
 // Função para gerar tabela de classificação com critérios
 function gerarTabelaClassificacao(jogadores, jogos, containerId) {
