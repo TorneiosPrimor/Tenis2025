@@ -19,6 +19,7 @@ function gerarTabelaJogos(jogadores, jogos, containerId) {
     html += `
       <tr>
         <td></td>
+        <td></td>
         <td>Resultado</td>
         <td>1º Set</td>
         <td>2º Set</td>
@@ -32,14 +33,16 @@ function gerarTabelaJogos(jogadores, jogos, containerId) {
 
       html += `
         <tr>
-          <td style="text-align: start; min-width: 6rem;">${jogo.jogador1}</td>
+          <td><img src="assets/icons/user-solid.svg" alt=""></td>
+          <td style="text-align: start; min-width: 3rem;">${jogo.jogador1}</td>
           <td style="font-weight: bold;">${setsJ1}</td>
           <td style="font-weight: lighter; color: gray;">${sets[0]?.[0] ?? ''}</td>
           <td style="font-weight: lighter; color: gray;">${sets[1]?.[0] ?? ''}</td>
           <td style="font-weight: lighter; color: gray;">${sets[2]?.[0] ?? ''}</td>
         </tr>
         <tr>
-          <td style="text-align: start; min-width: 6rem;">${jogo.jogador2}</td>
+          <td><img src="assets/icons/user-solid.svg" alt=""></td>
+          <td style="text-align: start; min-width: 3rem;">${jogo.jogador2}</td>
           <td style="font-weight: bold;">${setsJ2}</td>
           <td style="font-weight: lighter; color: gray;">${sets[0]?.[1] ?? ''}</td>
           <td style="font-weight: lighter; color: gray;">${sets[1]?.[1] ?? ''}</td>
@@ -49,10 +52,12 @@ function gerarTabelaJogos(jogadores, jogos, containerId) {
     } else {
       html += `
         <tr>
+          <td><img src="assets/icons/user-solid.svg" alt=""></td>
           <td style="text-align: start; min-width: 6rem;">${jogo.jogador1}</td>
           <td colspan="4" style="color: gray; font-style: italic;">Aguardando resultado</td>
         </tr>
         <tr>
+          <td><img src="assets/icons/user-solid.svg" alt=""></td>
           <td style="text-align: start; min-width: 6rem;">${jogo.jogador2}</td>
           <td colspan="4"></td>
         </tr>
@@ -146,9 +151,10 @@ function gerarTabelaClassificacao(jogadores, jogos, containerId) {
     if (b.saldoPontos !== a.saldoPontos) return b.saldoPontos - a.saldoPontos;
     return b.setsPro - a.setsPro;
   });
-
-  let html = '<table border="1" cellspacing="0" cellpadding="5"><thead><tr><th>Posição</th><th>Jogador</th><th>Pontos</th><th>Jogos</th><th>Vitórias</th><th>Derrotas</th><th>Sets Pró</th><th>Sets Contra</th><th>Saldo Sets</th><th>Pontos Pró</th><th>Pontos Contra</th><th>Saldo Pontos</th></tr></thead><tbody>';
-
+  
+  
+  let html = '<table border="1" cellspacing="0" cellpadding="5"><thead><tr><th>#</th><th>Jogador</th><th>P</th><th>J</th><th>V</th><th>D</th><th>SP</th><th>SC</th><th>SS</th><th>PP</th><th>PC</th><th>SP</th></tr></thead><tbody>';
+  html += '<div class="legenda"> <p>SP - Sets Pró</p> <p>SC - Sets Contra</p> <p>SS - Saldo Sets</p> <p>PP - Pontos Pró</p> <p>PC - Pontos Contra</p> <p>SP - Saldo Pontos</p> </div>';
   ranking.forEach((j, i) => {
     html += `<tr>
       <td>${i + 1}</td>
