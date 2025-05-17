@@ -229,6 +229,47 @@ function ativarTabs() {
   });
 }
 
+// //Função de rolagem menu superior
+document.getElementById('btn-classificacao').addEventListener('click', () => {
+  // Identifica a tab ativa
+  const tabAtiva = document.querySelector('.tab-content.active');
+
+  // Dentro da tab ativa, verifica se há um grupo ativo (para intermediário e feminino/kids)
+  const grupoAtivo = tabAtiva.querySelector('.group-content.active');
+
+  // Determina o container da classificação que deve ser focado
+  let alvo;
+  if (grupoAtivo) {
+    alvo = grupoAtivo.querySelector('[id^="classificacao-"]');
+  } else {
+    alvo = tabAtiva.querySelector('[id^="classificacao-"]');
+  }
+
+  // Rola suavemente até o elemento de classificação
+  if (alvo) {
+    alvo.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+});
+
+const btnTopo = document.getElementById('btn-voltar-topo');
+
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const alturaJanela = window.innerHeight;
+  const alturaDocumento = document.documentElement.scrollHeight;
+
+  // Verifica se o usuário chegou ao final da página
+  if (scrollTop + alturaJanela >= alturaDocumento - 20) {
+    btnTopo.style.display = 'block';
+  } else {
+    btnTopo.style.display = 'none';
+  }
+});
+
+// Ao clicar no botão, volta suavemente ao topo
+btnTopo.addEventListener('click', () => {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+});
 
 // Inicializa a página
 function inicializar() {
