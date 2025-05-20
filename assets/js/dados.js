@@ -3,7 +3,7 @@ const dadosCampeonato = {
     grupoA: {
       jogadores: ['Valdemir', 'Clarito', 'Arthur', 'Zenildo', 'Davi', 'Cleber'],
       jogos: [
-        { jogador1: 'Valdemir', jogador2: 'Clarito', sets: [] },
+        { jogador1: 'Valdemir', jogador2: 'Clarito', sets: [[0, 6], [7, 5]] },
         { jogador1: 'Valdemir', jogador2: 'Arthur', sets: [] },
         { jogador1: 'Valdemir', jogador2: 'Zenildo', sets: [[7, 6], [6, 2]] },
         { jogador1: 'Valdemir', jogador2: 'Davi', sets: [] },
