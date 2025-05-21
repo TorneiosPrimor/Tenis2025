@@ -35,7 +35,7 @@ const dadosCampeonato = {
         { jogador1: 'Ceará', jogador2: 'Nero', sets: [] },
         { jogador1: 'Ceará', jogador2: 'Jefferson', sets: [] },
         { jogador1: 'Ceará', jogador2: 'Bittencourt', sets: [] },
-        { jogador1: 'Nero', jogador2: 'Jefferson', sets: [] },
+        { jogador1: 'Nero', jogador2: 'Jefferson', sets: [[6, 1], [7, 5]] },
         { jogador1: 'Nero', jogador2: 'Bittencourt', sets: [[0, 6], [2, 6]] },
         { jogador1: 'Jefferson', jogador2: 'Bittencourt', sets: [[1, 6], [3, 6]] },
       ],
@@ -56,7 +56,7 @@ const dadosCampeonato = {
     grupoB: {
       jogadores: ['Adriana', 'Camila', 'Davi', 'Luis'],
       jogos: [
-        { jogador1: 'Adriana', jogador2: 'Camila', sets: [] },
+        { jogador1: 'Adriana', jogador2: 'Camila', sets: [[0, 6], [1, 6]] },
         { jogador1: 'Adriana', jogador2: 'Davi', sets: [] },
         { jogador1: 'Adriana', jogador2: 'Luis', sets: [] },
         { jogador1: 'Camila', jogador2: 'Davi', sets: [] },
