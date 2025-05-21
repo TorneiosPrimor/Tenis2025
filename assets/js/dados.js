@@ -15,7 +15,7 @@ const dadosCampeonato = {
         { jogador1: 'Arthur', jogador2: 'Zenildo', sets: [] },
         { jogador1: 'Arthur', jogador2: 'Davi', sets: [[6,0], [6,3]] },
         { jogador1: 'Arthur', jogador2: 'Cleber', sets: [] },
-        { jogador1: 'Zenildo', jogador2: 'Davi', sets: [] },
+        { jogador1: 'Zenildo', jogador2: 'Davi', sets: [[6, 1], [6, 1]] },
         { jogador1: 'Zenildo', jogador2: 'Cleber', sets: [] },
         { jogador1: 'Davi', jogador2: 'Cleber', sets: [[7, 5], [6, 0]] },
       ],
