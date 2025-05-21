@@ -54,14 +54,14 @@ const dadosCampeonato = {
       ],
     },
     grupoB: {
-      jogadores: ['Adriana', 'Camila', 'Davi', 'Luis'],
+      jogadores: ['Adriana', 'Camila', 'Leozinho', 'Luis'],
       jogos: [
         { jogador1: 'Adriana', jogador2: 'Camila', sets: [[0, 6], [1, 6]] },
-        { jogador1: 'Adriana', jogador2: 'Davi', sets: [] },
+        { jogador1: 'Adriana', jogador2: 'Leozinho', sets: [] },
         { jogador1: 'Adriana', jogador2: 'Luis', sets: [] },
-        { jogador1: 'Camila', jogador2: 'Davi', sets: [] },
+        { jogador1: 'Camila', jogador2: 'Leozinho', sets: [] },
         { jogador1: 'Camila', jogador2: 'Luis', sets: [] },
-        { jogador1: 'Davi', jogador2: 'Luis', sets: [] },
+        { jogador1: 'Leozinho', jogador2: 'Luis', sets: [] },
       ],
     },
   },
