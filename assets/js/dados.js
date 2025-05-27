@@ -68,7 +68,7 @@ const dadosCampeonato = {
   avancado: {
     jogadores: ['Érico', 'Renato', 'Jorge', 'Leoni'],
     jogos: [
-      { jogador1: 'Érico', jogador2: 'Renato', sets: [] },
+      { jogador1: 'Érico', jogador2: 'Renato', sets: [[6, 3], [6, 1]] },
       { jogador1: 'Érico', jogador2: 'Jorge', sets: [] },
       { jogador1: 'Érico', jogador2: 'Leoni', sets: [[6, 2], [6, 4]] },
       { jogador1: 'Renato', jogador2: 'Jorge', sets: [] },
