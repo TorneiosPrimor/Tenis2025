@@ -34,7 +34,7 @@ const dadosCampeonato = {
         { jogador1: 'Adriano', jogador2: 'Bittencourt', sets: [] },
         { jogador1: 'Ceará', jogador2: 'Nero', sets: [] },
         { jogador1: 'Ceará', jogador2: 'Jefferson', sets: [] },
-        { jogador1: 'Ceará', jogador2: 'Bittencourt', sets: [] },
+        { jogador1: 'Ceará', jogador2: 'Bittencourt', sets: [[6, 4], [5, 7], [10, 7]] },
         { jogador1: 'Nero', jogador2: 'Jefferson', sets: [[6, 1], [7, 5]] },
         { jogador1: 'Nero', jogador2: 'Bittencourt', sets: [[0, 6], [2, 6]] },
         { jogador1: 'Jefferson', jogador2: 'Bittencourt', sets: [[1, 6], [3, 6]] },
