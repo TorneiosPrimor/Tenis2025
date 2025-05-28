@@ -45,7 +45,7 @@ const dadosCampeonato = {
     grupoA: {
       jogadores: ['Melissa', 'Matheus', 'Stella', 'Pedro'],
       jogos: [
-        { jogador1: 'Melissa', jogador2: 'Matheus', sets: [] },
+        { jogador1: 'Melissa', jogador2: 'Matheus', sets: [[2, 6], [5, 6]] },
         { jogador1: 'Melissa', jogador2: 'Stella', sets: [] },
         { jogador1: 'Melissa', jogador2: 'Pedro', sets: [[2, 6], [4, 6]] },
         { jogador1: 'Matheus', jogador2: 'Stella', sets: [] },
