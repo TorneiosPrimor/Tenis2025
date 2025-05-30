@@ -23,7 +23,7 @@ const dadosCampeonato = {
     grupoB: {
       jogadores: ['Mayke', 'Adriano', 'Ceará', 'Nero', 'Jefferson', 'Bittencourt'],
       jogos: [
-        { jogador1: 'Mayke', jogador2: 'Adriano', sets: [] },
+        { jogador1: 'Mayke', jogador2: 'Adriano', sets: [[0, 6], [0, 6]] },
         { jogador1: 'Mayke', jogador2: 'Ceará', sets: [[1, 6], [1, 6]] },
         { jogador1: 'Mayke', jogador2: 'Nero', sets: [] },
         { jogador1: 'Mayke', jogador2: 'Jefferson', sets: [[1, 6], [1, 6]] },
