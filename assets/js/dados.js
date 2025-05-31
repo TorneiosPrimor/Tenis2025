@@ -57,7 +57,7 @@ const dadosCampeonato = {
       jogadores: ['Adriana', 'Camila', 'Leozinho', 'Luis'],
       jogos: [
         { jogador1: 'Adriana', jogador2: 'Camila', sets: [[0, 6], [1, 6]] },
-        { jogador1: 'Adriana', jogador2: 'Leozinho', sets: [] },
+        { jogador1: 'Adriana', jogador2: 'Leozinho', sets: [[6, 2], [4, 6], [10, 4]] },
         { jogador1: 'Adriana', jogador2: 'Luis', sets: [[6, 3], [6, 4]] },
         { jogador1: 'Camila', jogador2: 'Leozinho', sets: [[6, 1], [6, 2]] },
         { jogador1: 'Camila', jogador2: 'Luis', sets: [] },
